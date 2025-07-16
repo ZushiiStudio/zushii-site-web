@@ -1,0 +1,210 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background-image: url('https://i.imgur.com/EyAZVxg.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+}
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+.portfolio-text {
+  font-size: 0.75rem;
+  background-color: #222;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  color: #FF7F00;
+  margin: 1rem 2rem;
+  width: fit-content;
+}
+.portfolio-text a {
+  text-decoration: none;
+  color: #FF7F00;
+}
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+.offer-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.offer-card {
+  background: linear-gradient(135deg, rgba(50,50,50,0.6), rgba(0,0,0,0.7));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+.offer-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.offer-card h3:hover {
+  transform: scale(1.25);
+}
+.offer-card p {
+  font-size: 0.85rem;
+  color: #999999;
+  font-style: italic;
+}
+section {
+  padding: 4rem 2rem;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.gallery img {
+  border-radius: 12px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 100%;
+  filter: blur(4px);
+}
+.gallery img:hover {
+  transform: scale(1.1);
+  filter: blur(0);
+}
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.contact-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #000000;
+  color: #FF7F00;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 0.85rem;
+  min-width: 100px;
+  text-align: center;
+}
+.contact-button:hover {
+  background-color: #FF7F00;
+  color: #000000;
+}
+.contact-button span.email,
+.contact-button span.instagram,
+.contact-button span.numero {
+  display: none;
+}
+.contact-button:hover span.label {
+  display: none;
+}
+.contact-button:hover span.email,
+.contact-button:hover span.instagram,
+.contact-button:hover span.numero {
+  display: inline;
+}
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  background-color: #111;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  padding: 3rem 1rem;
+}
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  color: #FFFFFF;
+}
+.modal-content h2 {
+  text-align: center;
+  color: #FF7F00;
+  margin-bottom: 1.5rem;
+}
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background: transparent;
+  border: 1px solid #FF7F00;
+  color: #fff;
+  border-radius: 8px;
+}
+.modal-content button {
+  background-color: #FF7F00;
+  color: black;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #FF7F00;
+}
+.success-message {
+  text-align: center;
+  color: #00ffcc;
+  margin-top: 1rem;
+}

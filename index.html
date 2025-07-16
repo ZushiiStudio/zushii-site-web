@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZUSHII Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ZUSHII Studio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="portfolio-text">
+    <a href="https://www.behance.net/gallery/230303765/PORTFOLIO-ZUSHII-Studio" target="_blank">Portfolio de ZUSHII Studio</a>
+  </div>
+
+  <section id="hero">
+    <div class="offer-grid">
+      <div class="offer-card" onclick="openModal()">
+        <h3>BRANDING</h3>
+        <p>(logo, chartes graphiques, etc.)</p>
+      </div>
+      <div class="offer-card" onclick="openPosterModal()">
+        <h3>POSTER, COVER</h3>
+        <p>(décrivez votre idée)</p>
+      </div>
+      <div class="offer-card" onclick="openMerchModal()">
+        <h3>MERCH</h3>
+        <p>(t-shirt, stickers, casquette...)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>À propos</h2>
+      <p>Basé à Madagascar, ZUSHII Studio conçoit des identités visuelles percutantes et des supports de communication à forte valeur créative.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projets</h2>
+      <div class="gallery">
+        <img src="https://i.imgur.com/U1XuShp.jpeg" />
+        <img src="https://i.imgur.com/fotbhb1.jpeg" />
+        <img src="https://i.imgur.com/vapE7Ev.jpeg" />
+        <img src="https://i.imgur.com/FdcyOtR.jpeg" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-buttons">
+        <div class="contact-button" onclick="copyToClipboard('email')">
+          <span class="label">E-MAIL</span>
+          <span class="email" id="email">dylanrakotozafy8@gmail.com</span>
+        </div>
+        <div class="contact-button" onclick="window.open('https://www.instagram.com/zushii_studio', '_blank')">
+          <span class="label">INSTAGRAM</span>
+          <span class="instagram">ZUSHII Studio</span>
+        </div>
+        <div class="contact-button" onclick="copyToClipboard('numero')">
+          <span class="label">NUMÉRO</span>
+          <span class="numero" id="numero">+261 34 34 017 45</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ZUSHII Studio. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Modal Branding -->
+  <div id="brandingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Formulaire Branding</h2>
+      <form action="https://formspree.io/f/xjkovkdq" method="POST" target="_blank">
+        <input type="text" name="Nom entreprise" placeholder="Nom de l'entreprise" required />
+        <textarea name="Description" placeholder="Description du projet" required></textarea>
+        <input type="text" name="Couleurs" placeholder="Préférences de couleur" required />
+        <input type="text" name="Style" placeholder="Style préféré" required />
+        <textarea name="Autres" placeholder="Informations supplémentaires"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Poster -->
+  <div id="posterModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePosterModal()">&times;</span>
+      <h2>Formulaire Poster / Cover</h2>
+      <form action="https://formspree.io/f/xyzpyzqk" method="POST" target="_blank">
+        <input type="email" name="email" placeholder="Votre email" required />
+        <textarea name="message" placeholder="Décrivez votre idée ici..." required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Merch -->
+  <div id="merchModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeMerchModal()">&times;</span>
+      <h2>Formulaire MERCH</h2>
+      <form action="https://formspree.io/f/movlqvow" method="POST" target="_blank">
+        <input type="email" name="email" placeholder="Votre email" required />
+        <input type="number" name="Quantité" placeholder="Combien de designs ?" required />
+        <input type="text" name="Supports" placeholder="Sur quel(s) support(s) ?" required />
+        <textarea name="Description" placeholder="Description du ou des designs" required></textarea>
+        <textarea name="Autres" placeholder="Autres informations utiles (ex: style, deadline, inspiration...)"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lien vers le fichier JavaScript externe -->
+  <script src="script.js"></script>
+</body>
+</html>
